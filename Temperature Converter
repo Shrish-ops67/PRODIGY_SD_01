@@ -1,0 +1,27 @@
+# Temperature Converter Program
+
+# Taking input from user
+temperature = float(input("Enter the temperature value: "))
+unit = input("Enter the unit (C for Celsius, F for Fahrenheit, K for Kelvin): ").upper()
+
+# Conversion logic
+if unit == 'C':
+    fahrenheit = (temperature * 9/5) + 32
+    kelvin = temperature + 273.15
+    print("Temperature in Fahrenheit:", round(fahrenheit, 2), "°F")
+    print("Temperature in Kelvin:", round(kelvin, 2), "K")
+
+elif unit == 'F':
+    celsius = (temperature - 32) * 5/9
+    kelvin = celsius + 273.15
+    print("Temperature in Celsius:", round(celsius, 2), "°C")
+    print("Temperature in Kelvin:", round(kelvin, 2), "K")
+
+elif unit == 'K':
+    celsius = temperature - 273.15
+    fahrenheit = (celsius * 9/5) + 32
+    print("Temperature in Celsius:", round(celsius, 2), "°C")
+    print("Temperature in Fahrenheit:", round(fahrenheit, 2), "°F")
+
+else:
+    print("Invalid unit entered. Please enter C, F, or K.")
